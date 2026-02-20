@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import nstpLogo from "@/assets/NSTP.png";
 
 const navItems = [
   {
@@ -36,7 +38,7 @@ export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
-    <header className="sticky top-0 z-50 bg-black shadow-lg">
+    <header className="sticky top-0 z-50 bg-white shadow">
       {/* Top accent bar */}
       <div className="h-1 bg-red-600" />
 
@@ -44,14 +46,18 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center bg-red-600 font-heading text-lg font-bold text-white">
-              UNC
-            </div>
+            <Image
+              src={nstpLogo}
+              alt="UNC NSTP Logo"
+              width={40}
+              height={40}
+              className="h-10 w-10 object-contain"
+            />
             <div className="hidden sm:block">
-              <p className="font-heading text-lg leading-tight text-white">
+              <p className="font-heading text-lg leading-tight text-gray-900">
                 UNC NSTP
               </p>
-              <p className="text-xs text-gray-400">
+              <p className="text-xs text-gray-500">
                 National Service Training Program
               </p>
             </div>
@@ -68,19 +74,19 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-gray-900 hover:text-white"
+                  className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50 hover:text-gray-900"
                 >
                   {item.label}
                   {item.children && <ChevronDown className="h-3.5 w-3.5" />}
                 </Link>
 
                 {item.children && openDropdown === item.label && (
-                  <div className="absolute left-0 top-full min-w-[220px] border border-gray-800 bg-black py-1 shadow-xl">
+                  <div className="absolute left-0 top-full min-w-[220px] border border-gray-200 bg-white py-1 shadow-lg">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-gray-900 hover:text-red-400"
+                        className="block px-4 py-2.5 text-sm text-gray-600 transition-colors hover:bg-gray-50 hover:text-red-600"
                       >
                         {child.label}
                       </Link>
@@ -94,7 +100,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2 text-gray-300 hover:bg-gray-900 lg:hidden"
+            className="p-2 text-gray-600 hover:bg-gray-50 lg:hidden"
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -102,13 +108,13 @@ export default function Navbar() {
 
         {/* Mobile nav */}
         {mobileOpen && (
-          <div className="border-t border-gray-800 pb-4 lg:hidden">
+          <div className="border-t border-gray-200 pb-4 lg:hidden">
             {navItems.map((item) => (
               <div key={item.label}>
                 <Link
                   href={item.href}
                   onClick={() => !item.children && setMobileOpen(false)}
-                  className="block px-3 py-2.5 text-sm font-medium text-gray-300 hover:bg-gray-900 hover:text-white"
+                  className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
                 >
                   {item.label}
                 </Link>
@@ -117,7 +123,7 @@ export default function Navbar() {
                     key={child.href}
                     href={child.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block py-2 pl-8 pr-3 text-sm text-gray-400 hover:bg-gray-900 hover:text-red-400"
+                    className="block py-2 pl-8 pr-3 text-sm text-gray-500 hover:bg-gray-50 hover:text-red-600"
                   >
                     {child.label}
                   </Link>

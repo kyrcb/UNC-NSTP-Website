@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-heading: "Roboto Flex", sans-serif;
+  --font-heading: "Poppins", sans-serif;
   --font-body: "Roboto Flex", sans-serif;
 }
 

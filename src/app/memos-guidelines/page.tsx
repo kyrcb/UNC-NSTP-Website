@@ -41,7 +41,7 @@ export default function MemosGuidelinesPage() {
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="bg-green-50 px-2.5 py-0.5 text-xs font-medium text-green-600">
+                        <span className="bg-red-50 px-2.5 py-0.5 text-xs font-medium text-red-600">
                           {memo.type}
                         </span>
                         <span className="flex items-center gap-1 text-xs text-gray-400">

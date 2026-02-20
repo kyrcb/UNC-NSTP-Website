@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Phone, Mail } from "lucide-react";
+import nstpLogoWhite from "@/assets/NSTP-AllWhite.png";
 
 export default function Footer() {
   return (
@@ -9,9 +11,13 @@ export default function Footer() {
           {/* Branding */}
           <div>
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center bg-red-600 font-heading text-lg font-bold text-white">
-                UNC
-              </div>
+              <Image
+                src={nstpLogoWhite}
+                alt="UNC NSTP Logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+              />
               <div>
                 <p className="font-heading text-lg text-white">UNC NSTP</p>
                 <p className="text-xs text-gray-500">
@@ -28,7 +34,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-heading text-sm uppercase tracking-wider text-green-500">
+            <h3 className="font-heading text-sm uppercase tracking-wider text-red-500">
               Quick Links
             </h3>
             <ul className="mt-4 space-y-2.5">
@@ -53,12 +59,12 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-heading text-sm uppercase tracking-wider text-green-500">
+            <h3 className="font-heading text-sm uppercase tracking-wider text-red-500">
               Contact Us
             </h3>
             <ul className="mt-4 space-y-3">
               <li className="flex items-start gap-3 text-sm">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-green-500" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-red-500" />
                 <span>
                   AMS Building, Room 108B
                   <br />
@@ -66,11 +72,11 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex items-center gap-3 text-sm">
-                <Phone className="h-4 w-4 shrink-0 text-green-500" />
+                <Phone className="h-4 w-4 shrink-0 text-red-500" />
                 <span>(052) 472-6100 local 151 or 126</span>
               </li>
               <li className="flex items-center gap-3 text-sm">
-                <Mail className="h-4 w-4 shrink-0 text-green-500" />
+                <Mail className="h-4 w-4 shrink-0 text-red-500" />
                 <a
                   href="mailto:nstp@unc.edu.ph"
                   className="transition-colors hover:text-red-400"

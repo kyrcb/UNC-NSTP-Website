@@ -17,7 +17,7 @@ export default function PageHeader({
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 25% 50%, rgba(220,38,38,0.3) 0%, transparent 50%), radial-gradient(circle at 75% 50%, rgba(220,38,38,0.2) 0%, transparent 50%)",
+              "radial-gradient(circle at 25% 50%, rgba(5,112,226,0.3) 0%, transparent 50%), radial-gradient(circle at 75% 50%, rgba(5,112,226,0.2) 0%, transparent 50%)",
           }}
         />
       </div>

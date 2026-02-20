@@ -77,7 +77,7 @@ export default function OrganizationalChartPage() {
 
             {/* Student Council */}
             <div className="mt-10 h-px w-full max-w-2xl bg-gray-200" />
-            <div className="mt-6 border border-green-200 bg-green-50 px-8 py-4 text-center">
+            <div className="mt-6 border border-red-200 bg-red-50 px-8 py-4 text-center">
               <p className="font-heading text-base text-gray-900">
                 NSTP Student Council
               </p>

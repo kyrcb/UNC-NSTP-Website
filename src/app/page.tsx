@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   BookOpen,
@@ -7,9 +8,10 @@ import {
   FileText,
   HelpCircle,
   ArrowRight,
-  Target,
   Heart,
 } from "lucide-react";
+import heroImage from "@/assets/hero.jpg";
+import nstpLogo from "@/assets/NSTPcontrast.png";
 
 const programs = [
   {
@@ -73,22 +75,24 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-black">
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(ellipse at 20% 50%, rgba(220,38,38,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(127,29,29,0.4) 0%, transparent 60%)",
-            }}
-          />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8 lg:py-40">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 border border-gray-700 bg-gray-900/50 px-4 py-1.5 text-sm text-red-400">
-              <Target className="h-4 w-4" />
-              University of Nueva Caceres
-            </div>
-            <h1 className="mt-6 font-heading text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
+        <Image
+          src={heroImage}
+          alt="University of Nueva Caceres campus"
+          fill
+          className="object-cover opacity-70"
+          priority
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%)",
+          }}
+        />
+        <div className="relative z-20 mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8 lg:py-40">
+          <div className="flex items-center justify-between gap-10">
+          <div className="flex-1">
+            <h1 className="font-heading text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl">
               National Service
               <br />
               <span className="text-red-500">Training Program</span>
@@ -113,6 +117,16 @@ export default function Home() {
                 About Us
               </Link>
             </div>
+          </div>
+          <div className="hidden shrink-0 sm:block">
+            <Image
+              src={nstpLogo}
+              alt="UNC NSTP Emblem"
+              width={400}
+              height={400}
+              className="h-auto w-52 object-contain md:w-64 lg:w-96"
+            />
+          </div>
           </div>
         </div>
         {/* Bottom fade */}
@@ -188,7 +202,7 @@ export default function Home() {
                   <span className="text-sm">Activity Photo {i}</span>
                 </div>
                 <div className="p-6">
-                  <p className="text-xs font-medium uppercase tracking-wider text-green-600">
+                  <p className="text-xs font-medium uppercase tracking-wider text-red-600">
                     Event
                   </p>
                   <h3 className="mt-2 font-heading text-lg text-gray-900">

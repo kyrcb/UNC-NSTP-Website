@@ -17,7 +17,7 @@ export default function LTSPage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-start gap-6">
             <div className="hidden shrink-0 sm:block">
-              <div className="flex h-14 w-14 items-center justify-center bg-green-50 text-green-700">
+              <div className="flex h-14 w-14 items-center justify-center bg-red-50 text-red-700">
                 <BookOpen className="h-7 w-7" />
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function LTSPage() {
                 "Educational resource development",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-green-600" />
+                  <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-red-600" />
                   <span className="text-gray-600">{item}</span>
                 </li>
               ))}
