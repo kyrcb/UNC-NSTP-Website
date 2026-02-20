@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Roboto Flex", sans-serif;
+  --font-body: "Roboto Flex", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
