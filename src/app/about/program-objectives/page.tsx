@@ -22,15 +22,15 @@ export default function ProgramObjectivesPage() {
         ]}
       />
 
-      <section className="py-20">
+      <section className="py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="space-y-4">
             {objectives.map((objective, i) => (
               <div
                 key={i}
-                className="flex gap-5 border border-gray-100 bg-white p-6 shadow-sm"
+                className="flex gap-5 rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-md"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-red-700 font-heading text-sm text-white">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-700 font-heading text-sm text-white">
                   {i + 1}
                 </div>
                 <div className="pt-1.5">
@@ -40,7 +40,7 @@ export default function ProgramObjectivesPage() {
             ))}
           </div>
 
-          <div className="mt-12 bg-black p-8 text-center sm:p-10">
+          <div className="mt-14 rounded-2xl bg-gradient-to-br from-gray-950 to-gray-900 p-8 text-center sm:p-10">
             <Target className="mx-auto h-10 w-10 text-red-500" />
             <h3 className="mt-4 font-heading text-xl text-white">
               Our Commitment

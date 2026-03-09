@@ -13,13 +13,13 @@ export default function WhatIsNSTPPage() {
         ]}
       />
 
-      <section className="py-20">
+      <section className="py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="prose-custom">
+          <div>
             <h2 className="font-heading text-2xl text-gray-900">
               The National Service Training Program
             </h2>
-            <div className="mt-2 h-1 w-16 bg-red-600" />
+            <div className="mt-2 h-1 w-16 rounded-full bg-red-600" />
 
             <p className="mt-6 leading-relaxed text-gray-600">
               The National Service Training Program (NSTP) is a program aimed at
@@ -28,7 +28,7 @@ export default function WhatIsNSTPPage() {
               undergoing training in any of its three program components.
             </p>
 
-            <div className="mt-8 border-l-4 border-red-700 bg-red-50 p-6">
+            <div className="mt-8 rounded-xl border-l-4 border-red-700 bg-red-50 p-6">
               <h3 className="font-heading text-lg text-gray-900">
                 Legal Basis
               </h3>
@@ -43,7 +43,7 @@ export default function WhatIsNSTPPage() {
               </p>
             </div>
 
-            <h3 className="mt-10 font-heading text-xl text-gray-900">
+            <h3 className="mt-12 font-heading text-xl text-gray-900">
               Three Program Components
             </h3>
 
@@ -64,7 +64,7 @@ export default function WhatIsNSTPPage() {
               ].map((component) => (
                 <div
                   key={component.title}
-                  className="border border-gray-100 bg-white p-6 shadow-sm"
+                  className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-md"
                 >
                   <h4 className="font-heading text-base text-red-700">
                     {component.title}

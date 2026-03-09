@@ -13,19 +13,19 @@ export default function VisionPage() {
         ]}
       />
 
-      <section className="py-20">
+      <section className="py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center bg-gray-100">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-red-50">
               <Eye className="h-8 w-8 text-red-700" />
             </div>
             <h2 className="mt-6 font-heading text-2xl text-gray-900 sm:text-3xl">
               Our Vision
             </h2>
-            <div className="mx-auto mt-4 h-1 w-16 bg-red-600" />
+            <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-red-600" />
           </div>
 
-          <div className="mt-10 border border-gray-100 bg-white p-8 text-center shadow-sm sm:p-12">
+          <div className="mt-10 rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm sm:p-12">
             <p className="text-lg leading-relaxed text-gray-600 italic">
               &ldquo;The University of Nueva Caceres envisions itself as a
               leading institution committed to the holistic development of

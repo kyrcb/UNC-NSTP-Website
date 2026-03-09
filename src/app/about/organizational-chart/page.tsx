@@ -13,11 +13,11 @@ export default function OrganizationalChartPage() {
         ]}
       />
 
-      <section className="py-20">
+      <section className="py-24">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           {/* Top level */}
           <div className="flex flex-col items-center">
-            <div className="border-2 border-red-700 bg-black px-8 py-5 text-center shadow-lg">
+            <div className="rounded-xl border-2 border-red-700 bg-gradient-to-br from-gray-950 to-gray-900 px-8 py-5 text-center shadow-lg">
               <p className="font-heading text-lg text-white">
                 NSTP Director
               </p>
@@ -26,10 +26,10 @@ export default function OrganizationalChartPage() {
               </p>
             </div>
 
-            <div className="h-10 w-px bg-gray-400" />
+            <div className="h-10 w-px bg-gray-300" />
 
             {/* Mid level */}
-            <div className="border border-red-200 bg-red-50 px-8 py-4 text-center">
+            <div className="rounded-xl border border-red-200 bg-red-50 px-8 py-4 text-center">
               <p className="font-heading text-base text-gray-900">
                 NSTP Coordinator
               </p>
@@ -38,10 +38,10 @@ export default function OrganizationalChartPage() {
               </p>
             </div>
 
-            <div className="h-10 w-px bg-gray-400" />
+            <div className="h-10 w-px bg-gray-300" />
 
             {/* Branches connector */}
-            <div className="h-px w-full max-w-2xl bg-gray-400" />
+            <div className="h-px w-full max-w-2xl bg-gray-300" />
 
             {/* Department level */}
             <div className="mt-0 grid w-full max-w-3xl grid-cols-1 gap-6 sm:grid-cols-3">
@@ -51,8 +51,8 @@ export default function OrganizationalChartPage() {
                 { title: "LTS", subtitle: "Literacy Training Service" },
               ].map((dept) => (
                 <div key={dept.title} className="flex flex-col items-center">
-                  <div className="h-10 w-px bg-gray-400" />
-                  <div className="w-full border border-gray-200 bg-white p-5 text-center shadow-sm">
+                  <div className="h-10 w-px bg-gray-300" />
+                  <div className="w-full rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm">
                     <p className="font-heading text-base text-red-700">
                       {dept.title}
                     </p>
@@ -61,9 +61,9 @@ export default function OrganizationalChartPage() {
                     </p>
                   </div>
 
-                  <div className="h-6 w-px bg-gray-300" />
+                  <div className="h-6 w-px bg-gray-200" />
 
-                  <div className="w-full border border-gray-100 bg-gray-50 p-4 text-center">
+                  <div className="w-full rounded-lg border border-gray-100 bg-gray-50 p-4 text-center">
                     <p className="text-sm font-medium text-gray-700">
                       Faculty & Staff
                     </p>
@@ -77,7 +77,7 @@ export default function OrganizationalChartPage() {
 
             {/* Student Council */}
             <div className="mt-10 h-px w-full max-w-2xl bg-gray-200" />
-            <div className="mt-6 border border-red-200 bg-red-50 px-8 py-4 text-center">
+            <div className="mt-6 rounded-xl border border-red-200 bg-red-50 px-8 py-4 text-center">
               <p className="font-heading text-base text-gray-900">
                 NSTP Student Council
               </p>
@@ -87,7 +87,7 @@ export default function OrganizationalChartPage() {
             </div>
           </div>
 
-          <p className="mt-12 text-center text-sm text-gray-400 italic">
+          <p className="mt-14 text-center text-sm text-gray-400 italic">
             Replace this placeholder with the official UNC NSTP organizational
             chart image.
           </p>

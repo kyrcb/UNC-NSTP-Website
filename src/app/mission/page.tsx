@@ -13,19 +13,19 @@ export default function MissionPage() {
         ]}
       />
 
-      <section className="py-20">
+      <section className="py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center bg-gray-100">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-red-50">
               <Compass className="h-8 w-8 text-red-700" />
             </div>
             <h2 className="mt-6 font-heading text-2xl text-gray-900 sm:text-3xl">
               Our Mission
             </h2>
-            <div className="mx-auto mt-4 h-1 w-16 bg-red-600" />
+            <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-red-600" />
           </div>
 
-          <div className="mt-10 border border-gray-100 bg-white p-8 shadow-sm sm:p-12">
+          <div className="mt-10 rounded-2xl border border-gray-100 bg-white p-8 shadow-sm sm:p-12">
             <p className="text-center text-lg leading-relaxed text-gray-600 italic">
               &ldquo;The NSTP Office of the University of Nueva Caceres is
               committed to providing quality civic education, military training,
@@ -37,7 +37,7 @@ export default function MissionPage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-3">
+          <div className="mt-14 grid gap-6 sm:grid-cols-3">
             {[
               {
                 title: "Service",
@@ -54,7 +54,7 @@ export default function MissionPage() {
             ].map((value) => (
               <div
                 key={value.title}
-                className="border border-gray-100 bg-white p-6 text-center shadow-sm"
+                className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <h3 className="font-heading text-lg text-red-700">
                   {value.title}

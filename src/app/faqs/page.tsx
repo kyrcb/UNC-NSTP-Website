@@ -52,13 +52,13 @@ export default function FAQsPage() {
         subtitle="Find answers to common questions about the NSTP program"
       />
 
-      <section className="py-20">
+      <section className="py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="space-y-3">
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                className="overflow-hidden border border-gray-100 bg-white shadow-sm"
+                className="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition-all duration-200 hover:shadow-md"
               >
                 <button
                   onClick={() => setOpen(open === i ? null : i)}
@@ -68,23 +68,29 @@ export default function FAQsPage() {
                     {faq.question}
                   </span>
                   <ChevronDown
-                    className={`h-5 w-5 shrink-0 text-red-700 transition-transform ${
+                    className={`h-5 w-5 shrink-0 text-red-700 transition-transform duration-300 ${
                       open === i ? "rotate-180" : ""
                     }`}
                   />
                 </button>
-                {open === i && (
-                  <div className="border-t border-gray-100 px-6 py-5">
-                    <p className="text-sm leading-relaxed text-gray-600">
-                      {faq.answer}
-                    </p>
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    open === i ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="border-t border-gray-100 px-6 py-5">
+                      <p className="text-sm leading-relaxed text-gray-600">
+                        {faq.answer}
+                      </p>
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 bg-gray-100 p-8 text-center">
+          <div className="mt-14 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 p-8 text-center sm:p-10">
             <h3 className="font-heading text-lg text-gray-900">
               Still have questions?
             </h3>
@@ -92,7 +98,7 @@ export default function FAQsPage() {
               Contact the NSTP Office at{" "}
               <a
                 href="mailto:nstp@unc.edu.ph"
-                className="font-medium underline hover:text-red-600"
+                className="font-medium text-red-700 underline decoration-red-200 underline-offset-2 hover:text-red-600 hover:decoration-red-400"
               >
                 nstp@unc.edu.ph
               </a>{" "}

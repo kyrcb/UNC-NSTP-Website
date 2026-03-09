@@ -13,11 +13,11 @@ export default function LTSPage() {
         ]}
       />
 
-      <section className="py-20">
+      <section className="py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-start gap-6">
             <div className="hidden shrink-0 sm:block">
-              <div className="flex h-14 w-14 items-center justify-center bg-red-50 text-red-700">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-red-50 text-red-700">
                 <BookOpen className="h-7 w-7" />
               </div>
             </div>
@@ -34,11 +34,11 @@ export default function LTSPage() {
             </div>
           </div>
 
-          <div className="mt-12 border border-gray-100 bg-gray-50 p-8">
+          <div className="mt-14 rounded-2xl border border-gray-100 bg-gradient-to-br from-gray-50 to-white p-8 sm:p-10">
             <h3 className="font-heading text-lg text-gray-900">
               Program Highlights
             </h3>
-            <ul className="mt-4 space-y-3">
+            <ul className="mt-5 space-y-3.5">
               {[
                 "Teaching literacy and numeracy skills",
                 "Tutorial programs for school children",

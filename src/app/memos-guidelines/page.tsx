@@ -26,22 +26,22 @@ export default function MemosGuidelinesPage() {
         subtitle="Official announcements and guidelines from the NSTP Office"
       />
 
-      <section className="py-20">
+      <section className="py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="space-y-4">
             {memos.map((memo) => (
               <div
                 key={memo.title}
-                className="group border border-gray-100 bg-white p-6 shadow-sm transition-all hover:border-red-200 hover:shadow-md"
+                className="group rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:border-red-200 hover:shadow-md"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-gray-100 text-red-700">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gray-100 text-red-700 transition-colors duration-300 group-hover:bg-red-50">
                       <FileText className="h-5 w-5" />
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="bg-red-50 px-2.5 py-0.5 text-xs font-medium text-red-600">
+                        <span className="rounded-md bg-red-50 px-2.5 py-0.5 text-xs font-medium text-red-600">
                           {memo.type}
                         </span>
                         <span className="flex items-center gap-1 text-xs text-gray-400">
@@ -63,7 +63,7 @@ export default function MemosGuidelinesPage() {
             ))}
           </div>
 
-          <p className="mt-10 text-center text-sm text-gray-400">
+          <p className="mt-12 text-center text-sm text-gray-400">
             More memoranda and guidelines will be posted as they are released.
           </p>
         </div>
